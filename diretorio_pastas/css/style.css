@@ -1,0 +1,1564 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+
+/* Padronização para centralizar horizontalmente*/
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ****************************************************
+        DESKTOP*/
+@media screen and (min-device-width:1000px)
+{    
+    #container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    display: none;
+		
+}
+
+    #modal{
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    margin: auto;
+    margin-top: 150px; 
+}
+
+    #fechar{
+    height:25px; 
+    width:40px; 
+    background-color:red; 
+    text-align:center; 
+    text-decoration:none; 
+    color:#000; 
+    position: absolute;
+    margin-left: 660px;
+}
+    
+    body{
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/fundo.png);
+    }
+
+    h1{
+        margin: 40px;
+        font-size: 40px;
+        color: #111;
+    }
+
+    h2{
+        margin: 20px;
+        font-size: 25px;
+        color: #111;
+    }
+
+    p{
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    /*Cabeçalho que se encontra fixo em todas as páginas*/
+    #cabecalho{
+        width: 100%;
+        height: 69px;
+        position: fixed;
+        background-color: #ff4747;
+        color: #303030;
+        z-index: 999;
+        margin-top: -21px;
+    }
+
+    /* Itens do cabeçalho estarão aqui*/
+    #cabecalho_central{
+        width: 1400px;
+        height: inherit;
+    }
+
+    #logo{
+        width: 120px;
+        height: 143px;
+        float: left;
+        background-image: url(../imagens/icones/acme.png);
+        background-size:100% 100%;
+    }
+
+    /*Menu superior do site(dentro do cabeçalho)*/
+    nav{
+        width: 800px;
+        height: inherit;
+        float: left;
+        align-items: center;
+        color: #fff;
+    }
+
+    #menu_mobile_header{
+        display: none;
+    }
+    
+    #menu{
+        width: 800px;
+        height: 69px;
+        margin-left: 10px;
+    }
+
+    #menu li{
+        list-style: none;
+        margin-left: 60px;
+        float: left;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 20px;
+        background-color: rgba(255,71,71,0.7);
+    }
+
+    #menu li a{
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      font-family: verdana;
+      font-size: 19px;
+      transition: 0.5s;
+    }
+
+    #menu li a:hover{
+      color: #ffd6c6;
+      transition: 0.5s;
+        margin-top: 10px;
+    }
+
+    .menu_item ul{
+        display: none;
+        transition: 0.5s;
+        margin-top: 10px;
+    }
+
+    .menu_item:hover > .submenu{
+        display: block;
+        transition: 0.5s;
+    }
+
+    .submenu{
+        width: 100px;
+        height: 50px;
+        margin-left: -60px;
+    }
+
+    .submenu li{
+        width: 250px;
+        height: 70px;
+    }
+    /* Fim do conteúdo contido no cabeçalho*/
+
+    
+    
+    /* Area para autenticação*/
+    #autenticacao{
+        width: 400px;
+        height: inherit;
+        font-size: 15px;
+        float: left;
+        margin-top: 0px;
+        color:#fff;
+    }
+
+    .usuario{
+        width: 150px;
+        height: 50%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    
+    .usuario input{
+        width: 160px;
+        height: 22px;
+    }
+    
+    #autenticacao button{
+        margin-left: 20px;
+        margin-top: 23px;
+        width: 35px;
+        height: 35px;
+        position: relative;
+    }
+
+    #btsalv{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    /*Fim da área de autenticação */
+
+    
+    
+    
+    /* Area das redes sociais*/
+    #redes{
+      position: fixed;
+      margin-top: 500px;
+      margin-left: 1400px;
+
+    }
+    
+    .redes_sociais{
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      background-size:  100% 100%;
+    }
+
+    .redes_sociais img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .rede_1{
+        position: relative;
+        margin-top: -85px;
+       transform: scale(1.1);
+        display: none;
+    }
+
+    .redes_sociais:hover .rede_1{
+        display: block;
+        cursor: pointer;
+        width: 110%;
+        height: 110%;
+    }
+    /* Final da área de redes sociais*/
+
+    
+    
+
+    /************* HOME*/
+    /* Caixa que comporta o slider*/
+    #slider{
+        width: 1400px;
+        height: 388px;
+        z-index: 1;
+    }
+    
+     #imagem_fixa_home{
+        display: none;
+    }
+
+    /* Faixa onde é distribuido o conteúdo do site*/
+    #faixa_principal{
+        width: 1400px;
+        /* PARA ESTENDER AS CAIXAS AUTOMATICAMENTE*/
+        min-height: 300px;
+        height: auto;
+        background-color:#fff;
+        overflow: hidden;
+        box-shadow: 15px 0 15px -15px rgba(204,204,204,0.3), -15px 0 15px -15px rgba(204,204,204,0.3);
+        padding-top: 30px;
+        box-sizing: border-box;
+        }
+
+    /* Menu lateral*/
+    #menu_itens{
+        width: 20%;
+        min-height: 50px;
+        height: auto;
+        overflow: hidden;
+        color: #303030;
+        padding-top: 25px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+        float: left;
+        box-shadow: inset -10px 0 10px -10px rgba(192,192,192,0.3);
+    }
+
+    .itens_menu{
+        width: 65%;
+        margin-left: 30px;
+        height: 40px;
+        background-color: #ff8572;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        color: white;
+        transition: 1s;
+
+    }
+
+    .itens_menu:hover {
+        background-color: #f4715d;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    .itens_menu_submenu {
+        width: 180px;
+        height: 40px;
+        padding-top: 5px;
+        padding-left: 5px;
+        margin-left: 170px;
+        margin-top: -30px;
+        transition: 2s;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .itens_menu:hover > .itens_menu_submenu {
+        background-color: #ff8572;
+        transition: 1s;
+        cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Fim do menu lateral*/
+
+    
+    
+    
+    /* Area ao lado do menu lateral onde estão as div dos filmes*/
+    #conteudo{
+        width: 80%;
+        min-height: 300px;
+        height: auto;
+        overflow: hidden;
+        background-color: #fff;
+        float: left;
+        padding-top: 70px;
+        box-sizing: border-box;
+    }
+
+    /* caixa dos filmes*/
+    .caixa_conteudo{
+        width: 280px;
+        height: 450px;
+        margin: 20px;
+        margin-left: 55px;
+        background-color:#fff;
+        float: left;
+        -webkit-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        -moz-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        transition: 1s;
+    }
+
+    /* Efeito de zoom*/
+    .caixa_conteudo:hover{
+        transform: scale(1.1);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    /*Imagem dos filmes*/
+    .imagem_conteudo{
+        background-color: white;
+        height: 50%;
+        width:60%;
+        margin-top: 40px;
+    }
+
+    .imagem_conteudo img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Nome, descricao e preço do filme*/
+    .conteudo_filme{
+        width: 85%;
+        height: 45%;
+        margin-top: 30px;
+        color: black;
+        font-size: 15px;
+    }
+
+    .conteudo_filme p{
+        margin-bottom: 15px;
+    }
+
+    /* detalhes dos filmes*/
+    .detalhes{
+        margin-left: 150px;
+        margin-bottom: 20px;
+    }
+    /**********Final HOME */
+
+    
+    
+    
+    /********* PAGINA ATORES DESTAQUE **/
+    /* Caixa dos atores*/
+
+    #atores{
+        margin: 70px;
+        text-align: justify;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #atores figure{
+        margin: 70px;
+        width: 1100px;
+        height: 600px;
+        background-color: aquamarine;
+    }
+
+    #atores img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .caixas_ator_destaque{
+        width: 25%;
+        height: 220px;
+        background-color:#f2f2f2;
+        margin: 20px;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        float: left;
+        margin-left: 80px;
+        transition: 1s;
+    }
+
+    .caixas_ator_destaque:hover{
+        transition: 1s;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    /*Imagens atores */
+    .imagem_ator{
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: inherit;
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .imagem_ator img{
+        height: 180px;
+        width: 100%;
+        border-radius: 50%;
+
+    }
+    .conteudo_ator{
+        float: left;
+        width: 40%;
+        height: inherit;
+        margin-left: 20px;
+    }
+
+    .conteudo_ator p{
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    /* para deixar linha em baixo do nome dos atores*/
+    .nome{
+        border-bottom: solid 2px #ff4747;
+    }
+    /******* Final dos atores em destaque*/
+    
+    
+    
+
+    /* FALE CONOSCO*************************/
+    /* Area do formulário */
+    #fale_conosco{
+        min-height: 300px;
+        height: auto;
+        overflow: hidden;
+        width: 900px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 60px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+        -moz-box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+        -webkit-box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+    }
+
+    /* caixas para organização dos itens*/
+    .caixas_formulario_faleconosco{
+        width: 50%;
+        height: 60px;
+        float: left;
+        margin-top: 30px;
+    }
+
+    /* Caixas que o usuário colocará informação*/
+    .area_escrita_faleconosco{
+        width: inherit;
+        height: 50%;
+    }
+
+    .area_escrita_faleconosco input{
+        width: 300px;
+        height: 40px;
+    }
+
+    .obrigatorio:-moz-ui-invalid{
+        box-shadow: none;
+    }
+
+    /* onde informa oq o usuário digitará*/
+    .informacao_fale_conosco{
+        width: 350px;
+        height: 50%;
+    }
+
+    /* Sugestão ou crítica*/
+    .caixas_formulario_faleconosco_txtarea{
+        width: 90%;
+        height: 60px;
+        margin-bottom: 70px;
+        float: left;
+        margin-top: 30px;
+    }
+
+    .area_escrita_faleconosco_textarea{
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .area_escrita_faleconosco_textarea textarea{
+        width: 100%;
+        height: inherit;
+    }
+
+    /* Botão salvar e limpar*/
+    #botoes_faleconosco{
+        width: 220px;
+        height: 80px;
+        float: left;
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+
+    #botoes_faleconosco:hover input{
+        cursor: pointer;
+    }
+
+    #botoes_faleconosco input{
+        width: 100px;
+        height: 40px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    /* Caixa sexo*/
+    .rdo_faleconosco{
+        width: 90%;
+        height: 50%;
+    }
+
+    .rdo_faleconosco input{
+        margin-left: 8px;
+
+    }
+    /****** FINAL DO FALE CONOSCO*/
+
+
+    
+    
+    
+    /*****FILME_MES*/
+    /* Caixa do filme do mês*/
+    .caixa_filme_mes{
+        width: 1200px;
+        min-height: 300px;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 60px;
+        padding: 40px;
+        box-sizing: border-box;
+        -webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        color: #5e5e5e;
+        box-shadow: inset 0 0 15px rgba(192,192,192,0.8);
+    }
+
+    .titulo_filme_mes{
+        height: 42px;
+        min-width: 20px;
+        max-width: auto;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 30px;
+    }
+
+    .imagem_filme_mes{
+        width: 70%;
+        height: 500px;
+        background-color: aliceblue;
+        margin-top: 3%;
+        overflow: hidden;
+    }
+
+    .imagem_filme_mes img{
+        max-width: 100%;
+        -moz-transition: all 1s;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+
+    /*zoom na imagem do filme do mês*/
+    .imagem_filme_mes:hover img{
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    /* Conteúdo do filme do mês*/
+    .descricao_filme_mes{
+        width: 90%;
+        min-height: 20px;
+        height: auto;
+        overflow: hidden;
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 2;
+    }
+    /***** FINAL FILME MÊS*/
+
+    
+    
+    
+
+    /***** SOBRE A LOCADORA*/
+    /*caixa do conteúdo de sobre a locadora*/
+    #conteudo_sobre{
+        margin-top: 30px;
+        box-sizing: border-box;
+        width: 90%;
+        min-height: 20px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #conteudo_sobre p{
+        font-size: 16px;
+        text-align: justify;
+        line-height: 1.7;
+        margin-top: 40px;
+    }
+
+    #imagem_sobre, imagem_sobre img{
+        width: 1300;
+        height: 707px;
+
+    }
+    /* Fim da área SOBRE A LOCADORA*/
+
+    
+    
+    
+
+    /* AREA DE PROMOÇÕES */
+    /* Caixa onde as promoções aparecerão*/
+    .caixa_promocoes{
+        width: 600px;
+        height: 400px;
+        margin: 20px;
+        margin-left: 55px;
+        background-color:#fff;
+        float: left;
+        -webkit-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        -moz-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+        transition: 1s;
+    }
+
+    .caixa_promocoes:hover{
+        transform: scale(1.1);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .imagem_promocoes{
+        width: 40% ;
+        height: 83%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    .imagem_promocoes img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Conteúdo de texto da promoção que fica ao lado da imagem*/
+    .detalhes_promocoes{
+        width: 90px;
+        height: 20px;
+        margin-left: 190px;
+        margin-top: 10px;
+        float: left;
+    }
+
+    .conteudo_promocoes{
+        width: 46%;
+        height: 90%;
+        margin: 20px;
+        float: left;
+        color: black;
+    }
+
+    .titulo_filme_promocao{
+        font-size:24px;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-top: 30px;
+        width: 100%;
+        height: 120px;
+    }
+
+    /* valor antigo das promoções*/
+    .valor_filme_promocao{
+        font-size: 19px;
+        text-decoration: line-through;
+        color: red;
+        margin-bottom: 20px;
+    }
+
+    /* preço do filme em promoção*/
+    .final_filme_promocao{
+        font-size: 24px;
+        text-decoration: underline;
+        color: green;
+    }
+    /***** FIM DA PÁGINA PROMOÇÕES*/
+
+    
+    
+    
+    
+    /****NOSSAS LOJAS*/
+    /* Caixa que comportará todas as fotos das lojas*/
+    #image_shop{
+        width: 70%;
+        min-height: 300px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /* foto individual das lojas*/
+    .imagem_lojas{
+        width: 350px;
+        height: 350px;
+        margin: 30px;
+        margin-left: 70px;
+        float: left;
+        transition: 2s;
+    }
+
+    .imagem_lojas:hover{
+          -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+        transition: 2s;
+    }
+
+    .imagem_lojas img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Texto de informaçãosobre as lojas*/
+    #conteudo_lojas{
+        width: 90%;
+        min-height: 100px;
+        height: auto;
+        overflow: hidden;
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+    }
+
+    #conteudo_lojas p{
+        margin-top: 20px;
+        line-height: 2;
+        font-size: 17px;
+    }
+    /*****FIM DAS NOSSAS LOJAS */
+
+    
+    
+
+    /* Rodapé de todas as páginas*/
+    #rodape{
+        width: 1400px;
+        height: 420px;
+        background-color: rgba(255, 71, 71, 0.6);
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+
+    #caixa_imagem{
+        box-sizing: border-box;
+      width: 119px;
+      height: 142px;
+
+      background-image: url("../imagens/ICONES/acme2.png");
+
+    }
+
+    #conteudo_rodape{
+      width: 100%;
+      height: 250px;
+    }
+
+    .rodape_conteudo{
+      width: 30%;
+      height: 100%;
+      float: left;
+      margin-left: 35px;
+    }
+    
+    .rodape_conteudo2{
+      width: 30%;
+      height: 100%;
+      float: left;
+      margin-left: 35px;
+    }
+    
+    .rodape_conteudo p{
+        margin-top: 40px;
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    .rodape_conteudo2 p{
+        margin-top: 40px;
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    .imagem_rodape{
+        display: none;
+    }
+    /* Final do rodapé*/
+}
+
+
+
+
+
+/* ****************************************************
+        CELULAR*/
+@media screen and (max-device-width:800px)
+{
+    .sumir{
+        display: none;
+    }
+    
+    #container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    display: none;
+		
+}
+
+    #modal{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    margin-top: 25%; 
+}
+
+    #fechar{
+    height:40px; 
+    width:40px; 
+    background-image: url(../imagens/icones/close.png); 
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+}
+    
+    body{
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagens/fundo.png);
+}
+
+    h1{
+    margin: 40px;
+    font-size: 40px;
+    color: #111;
+}
+
+    h2{
+    margin: 20px;
+    font-size: 25px;
+    color: #111;
+}
+
+    p{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+    
+    /*Cabeçalho que se encontra fixo em todas as páginas*/
+    #cabecalho{
+    width: 100%;
+    height: 69px;
+    position: fixed;
+    background-color: #ff4747;
+    color: #303030;
+    z-index: 999;
+    margin-top: -21px;
+}
+
+    /* Itens do cabeçalho estarão aqui*/
+    #cabecalho_central{
+    width: 100%;
+    height: inherit;
+}
+
+    #logo{
+    width: 60px;
+    height: 70px;
+    background-image: url(../imagens/icones/acme.png);
+    background-size:60px 65px;
+    background-repeat: no-repeat;
+}
+
+    /*Menu superior do site(dentro do cabeçalho)*/
+    #menu_itens{
+        display: none;
+}
+
+    #menu{
+    display: none;
+}
+    
+    #menu_mobile_header{
+        width: 45px;
+        height: 45px;
+        background-image: url(../imagens/icones/menu_white_mobile.png);
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    } 
+    /* Fim do conteúdo contido no cabeçalho*/
+    
+    #menu_mobile_itens{
+        width: 200px;
+        height: 600px;
+        background-color: #000;
+        margin-top: 50px;
+        position: absolute;
+        display: none;
+    }
+    
+
+    /* Area para autenticação*/
+    #autenticacao{
+    display: none;
+}
+    /*Fim da área de autenticação */
+    
+    
+
+    /* Area das redes sociais*/
+    #redes{
+  position: fixed;
+  margin-top: 500px;
+  margin-left: 1400px;
+
+}   
+    /* Final da área de redes sociais*/
+    
+    
+
+
+    /***************** HOME*/
+    /* Caixa que comporta o slider*/
+    #slider{
+    display: none;
+}
+
+    #imagem_fixa_home{
+        width: 100%;
+        height: 200px; 
+        background-image: url(../imagens/imagem3%20-%20Copia.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* Caixa que comporta o slider*/
+
+    /* Faixa onde é distribuido o conteúdo do site*/
+    #faixa_principal{
+    width: 100%;
+    /* PARA ESTENDER AS CAIXAS AUTOMATICAMENTE*/
+    min-height: 300px;
+    height: auto;
+    background-color:#fff;
+    box-shadow: 15px 0 15px -15px rgba(204,204,204,0.3), -15px 0 15px -15px rgba(204,204,204,0.3);
+    padding-top: 30px;
+    box-sizing: border-box;
+    }
+
+    /* Menu lateral*/
+    #menu_itens{
+    display: none;
+}
+
+    .itens_menu{
+    width: 65%;
+    margin-left: 30px;
+    height: 40px;
+    background-color: #ff8572;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: white;
+    transition: 1s;
+
+}
+
+    .itens_menu:hover {
+    background-color: #f4715d;
+    transition: 1s;
+    cursor: pointer;
+}
+    /* Fim do menu lateral*/
+
+    
+    
+    /* Area ao lado do menu lateral onde estão as div dos filmes*/
+    #conteudo{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    float: left;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+    /* caixa dos filmes*/
+    .caixa_conteudo{
+    width: 245px;
+    height: 260px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    box-sizing: border-box;
+/*    background-color:#fff;*/
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+}
+
+    /*Imagem dos filmes*/
+    .imagem_conteudo{
+    background-color: white;
+    height: 55%;
+    width:40%;
+    
+}
+
+    .imagem_conteudo img{
+    width: 100%;
+    height: 100%;
+}
+
+    /* Nome, descricao e preço do filme*/
+    .conteudo_filme{
+    width: 85%;
+    height: 40%;
+    color: black;
+    font-size: 0.8em;
+}
+
+    .conteudo_filme p{
+    margin-bottom: 10px;
+}
+
+    /* detalhes dos filmes*/
+    .detalhes{
+    margin-left: 160px
+}
+    /**********Final HOME */
+    
+    
+    
+
+/********* PAGINA ATORES DESTAQUE **/
+/* Caixa dos atores*/
+
+    #atores{
+    margin: 70px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+    #atores figure{
+    margin: 70px;
+    width: 1100px;
+    height: 600px;
+    background-color: aquamarine;
+}
+
+    #atores img{
+    width: 100%;
+    height: 100%;
+}
+    
+    .caixas_ator_destaque{
+    width: 25%;
+    height: 220px;
+    background-color:#f2f2f2;
+    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    float: left;
+    margin-left: 80px;
+    transition: 1s;
+}
+
+    .caixas_ator_destaque:hover{
+    transition: 1s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+    /*Imagens atores */
+    .imagem_ator{
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: inherit;
+    width: 50%;
+    margin-left: 10px;
+}
+
+    .imagem_ator img{
+    height: 180px;
+    width: 100%;
+    border-radius: 50%;
+
+}
+    
+    .conteudo_ator{
+    float: left;
+    width: 40%;
+    height: inherit;
+    margin-left: 20px;
+}
+
+    .conteudo_ator p{
+    margin-top: 40px;
+    font-size: 18px;
+}
+    /* para deixar linha em baixo do nome dos atores*/
+    .nome{
+    border-bottom: solid 2px #ff4747;
+}
+    /******* Final dos atores em destaque*/
+    
+    
+    
+
+    /* FALE CONOSCO*************************/
+    /* Area do formulário */
+    #fale_conosco{
+    min-height: 300px;
+    height: auto;
+    overflow: hidden;
+    width: 900px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 60px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(192, 192, 192, 0.75);
+}
+
+    /* caixas para organização dos itens*/
+    .caixas_formulario_faleconosco{
+    width: 50%;
+    height: 60px;
+    float: left;
+    margin-top: 30px;
+}
+
+    /* Caixas que o usuário colocará informação*/
+    .area_escrita_faleconosco{
+    width: inherit;
+    height: 50%;
+}
+
+    .area_escrita_faleconosco input{
+    width: 300px;
+    height: 40px;
+}
+
+    .obrigatorio:-moz-ui-invalid{
+    box-shadow: none;
+}
+
+    /* onde informa oq o usuário digitará*/
+    .informacao_fale_conosco{
+    width: 350px;
+    height: 50%;
+}
+
+    /* Sugestão ou crítica*/
+    .caixas_formulario_faleconosco_txtarea{
+    width: 90%;
+    height: 60px;
+    margin-bottom: 70px;
+    float: left;
+    margin-top: 30px;
+}
+
+    .area_escrita_faleconosco_textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+    .area_escrita_faleconosco_textarea textarea{
+    width: 100%;
+    height: inherit;
+}
+
+    /* Botão salvar e limpar*/
+    #botoes_faleconosco{
+    width: 220px;
+    height: 80px;
+    float: left;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+
+    #botoes_faleconosco:hover input{
+    cursor: pointer;
+}
+
+    #botoes_faleconosco input{
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    float: left;
+}
+
+    /* Caixa sexo*/
+    .rdo_faleconosco{
+    width: 90%;
+    height: 50%;
+}
+
+    .rdo_faleconosco input{
+    margin-left: 8px;
+
+}
+    /****** FINAL DO FALE CONOSCO*/
+
+    
+
+    
+    /*****FILME_MES*/
+    /* Caixa do filme do mês*/
+    .caixa_filme_mes{
+    width: 1200px;
+    min-height: 300px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 60px;
+    padding: 40px;
+    box-sizing: border-box;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    color: #5e5e5e;
+    box-shadow: inset 0 0 15px rgba(192,192,192,0.8);
+}
+
+    .titulo_filme_mes{
+    height: 42px;
+    min-width: 20px;
+    max-width: auto;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+    .imagem_filme_mes{
+    width: 70%;
+    height: 500px;
+    background-color: aliceblue;
+    margin-top: 3%;
+    overflow: hidden;
+}
+
+    .imagem_filme_mes img{
+    max-width: 100%;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+    /*zoom na imagem do filme do mês*/
+    .imagem_filme_mes:hover img{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+    /* Conteúdo do filme do mês*/
+    .descricao_filme_mes{
+    width: 90%;
+    min-height: 20px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 2;
+}
+    /***** FINAL FILME MÊS*/
+
+
+    /***** SOBRE A LOCADORA*/
+    /*caixa do conteúdo de sobre a locadora*/
+    #conteudo_sobre{
+    margin-top: 30px;
+    box-sizing: border-box;
+    width: 90%;
+    min-height: 20px;
+    height: auto;
+    overflow: hidden;
+}
+
+    #conteudo_sobre p{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-top: 40px;
+}
+
+    #imagem_sobre, imagem_sobre img{
+    width: 1300;
+    height: 707px;
+    
+}
+    /* Fim da área SOBRE A LOCADORA*/
+    
+    
+
+
+    /* AREA DE PROMOÇÕES */
+    /* Caixa onde as promoções aparecerão*/
+    .caixa_promocoes{
+    width: 80%;
+    height: 400px;
+    margin: 20px;
+    margin-left: 55px;
+    background-color:#fff;
+    float: left;
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.08);
+    transition: 1s;
+}
+
+    .imagem_promocoes{
+    width: 40% ;
+    height: 83%;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+    .imagem_promocoes img{
+    width: 100%;
+    height: 100%;
+}
+
+    /*Conteúdo de texto da promoção que fica ao lado da imagem*/
+    .detalhes_promocoes{
+    width: 90px;
+    height: 20px;
+    margin-left: 190px;
+    margin-top: 10px;
+    float: left;
+}
+
+    .conteudo_promocoes{
+    width: 46%;
+    height: 90%;
+    margin: 20px;
+    float: left;
+    color: black;
+}
+
+    .titulo_filme_promocao{
+    font-size:24px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 30px;
+    width: 100%;
+    height: 120px;
+}
+
+    /* valor antigo das promoções*/
+    .valor_filme_promocao{
+    font-size: 19px;
+    text-decoration: line-through;
+    color: red;
+    margin-bottom: 20px;
+}
+
+    /* preço do filme em promoção*/
+    .final_filme_promocao{
+    font-size: 24px;
+    text-decoration: underline;
+    color: green;
+}
+    /***** FIM DA PÁGINA PROMOÇÕES*/
+    
+    
+    
+    
+
+    /****NOSSAS LOJAS*/
+    /* Caixa que comportará todas as fotos das lojas*/
+    #image_shop{
+    width: 70%;
+    min-height: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+    /* foto individual das lojas*/
+    .imagem_lojas{
+    width: 350px;
+    height: 350px;
+    margin: 30px;
+    margin-left: 70px;
+    float: left;
+    transition: 2s;
+}
+
+    .imagem_lojas:hover{
+      -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+    transition: 2s;
+}
+
+    .imagem_lojas img{
+    width: 100%;
+    height: 100%;
+}
+
+    /* Texto de informaçãosobre as lojas*/
+    #conteudo_lojas{
+    width: 90%;
+    min-height: 100px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+    #conteudo_lojas p{
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 17px;
+}
+    /*****FIM DAS NOSSAS LOJAS */
+
+    
+    
+    
+
+    /* Rodapé de todas as páginas*/
+    #rodape{
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    overflow: hidden;
+    background-color: rgba(255, 71, 71, 0.6);
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+    #caixa_imagem{
+    display: none;
+
+}
+
+    #conteudo_rodape{
+        width: 100%;
+        min-height: 50px;
+        height: auto;
+        overflow: hidden;
+        
+}
+
+    .rodape_conteudo{
+        width: 70%;
+        min-height: 50px;
+        height: auto;
+        overflow: hidden;
+        margin-left: 35px;
+        margin-bottom:15px;
+        float: left;
+    }
+    
+    .rodape_conteudo2{
+        width: 100%;
+        min-height: 50px;
+        height: auto;
+        overflow: hidden;
+        margin-left: 35px;
+        margin-bottom:15px;
+        float: left;
+    }
+    
+    .rodape_conteudo p{
+        width: 85%;  
+        font-size: 0.7em;
+        color: #fff;
+    }
+    
+    .rodape_conteudo2 p{
+        width: 85%;  
+        font-size: 0.7em;
+        color: #fff;
+    }
+    
+    .imagem_rodape{
+        width: 20%;
+        height: 150px;
+        float: left;
+    }
+    
+    .imagem_rodape img{
+        width: 50px;
+        height: 50px;
+        
+    }
+    /* Final do rodapé*/
+
+}

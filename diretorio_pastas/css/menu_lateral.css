@@ -1,0 +1,54 @@
+@media screen and (max-device-width:800px)
+{
+
+    #menu_lateral{
+        z-index: 888;
+        position: absolute;
+    }
+
+    #menu_mobile{
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        background-image: url(../imagens/icones/menu_red_mobile.png);
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+    }
+
+    #list_menu{
+        width: 200px;
+        height: 600px;
+        background-color: #000; 
+        float: left;
+    }
+
+    .itens{
+        width: inherit;
+        height: 50px;
+        color: #fff;
+        font-size: 18px;
+        background-color: #000;
+    }
+
+    /* classe de abertura do menu*/
+    .menu_mobile_open{
+        margin-left: 0px;
+        visibility: visible;
+        transition: 1s;
+        float: left;
+    }
+
+    /*classe de fechamento do menu*/
+    .menu_mobile_close{
+        margin-left: -200px;
+        visibility: hidden;
+        transition: 1s;
+    }
+}
+
+@media screen and (min-device-width:1000px)
+{
+     #menu_lateral{
+        display: none;
+    }
+}

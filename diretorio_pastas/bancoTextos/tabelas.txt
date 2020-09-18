@@ -1,0 +1,90 @@
+*************FALE CONOSCO *************
+
+CREATE TABLE tbl_fale_conosco(
+	codigo INT NOT NULL PRIMARY KEY auto_increment,
+	nome VARCHAR(100) NOT NULL,
+	telefone VARCHAR(100) NULL,
+	celular VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	home_page VARCHAR(100) NULL,
+	facebook VARCHAR(100) NULL,
+	sugestao TEXT NULL,
+	produto VARCHAR(100) NULL,
+	sexo CHAR(1) NOT NULL,
+	profissao VARCHAR(100) NOT NULL);
+	
+	
+*********** NOSSAS LOJAS ************1
+CREATE TABLE tbl_promocoes(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	imagem VARCHAR(300) NOT NULL,
+	titulo_filme VARCHAR(100) NOT NULL,
+	preco_antigo PARSEFLOAT NOT NULL,
+	preco_novo PARSEFLOAT NULL,
+	detalhes TEXT(65535) NOT NULL
+);
+
+*********** SOBRE A LOCADORA ************5   ========OK
+CREATE TABLE tbl_sobre(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	conteudo TEXT(65535) NOT NULL,
+	imagem VARCHAR(300) NOT NULL,
+	ativo TINYINT(1) NOT NULL DEFAULT 0
+);
+
+*********** FILME DO MES ************3 =========== OK
+CREATE TABLE tbl_filme_mes(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	titulo VARCHAR(100) NOT NULL,
+	imagem VARCHAR(300) NOT NULL,
+	conteudo TEXT(65535) NOT NULL,
+	ativo TINYINT(1) NOT NULL DEFAULT 0
+);
+
+                                    ================ OK
+CREATE TABLE tbl_nivel_usuario(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	nivel VARCHAR(100) NOT NULL,
+	ativo TINYINT(1) NOT NULL DEFAULT 0
+);
+                                        ================== OK
+CREATE TABLE tbl_usuario(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	usuario VARCHAR(100) NOT NULL,
+	senha VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	nivel VARCHAR(100) NOT NULL,
+	ativo TINYINT(1) NOT NULL DEFAULT 0	
+);
+
+*********** NOSSAS LOJAS ************4  ============== LOADING
+CREATE TABLE tbl_nossas_lojas(
+	id INT NOT NULL PRIMARY KEY auto_increment,
+	imagem1 VARCHAR(300) NOT NULL,
+	imagem2 VARCHAR (100) NOT NULL,
+	imagem3 VARCHAR (100) NOT NULL,
+	titulo TEXT NOT NULL,
+	conteudo TEXT NOT NULL,
+	ativo TINYINT(1) NOT NULL DEFAULT 0
+);
+
+
+CREATE TABLE tbl_filme(
+
+	id INT NOT NULL PRIMARY KEY auto_increment,
+
+	nome_filme VARCHAR(200) NOT NULL,
+
+	img_filme VARCHAR(255) NOT NULL,
+
+	descricao VARCHAR(200) NOT NULL,
+
+	preco DECIMAL NOT NULL,
+
+	ativo TINYINT(1) NOT NULL DEFAULT 0
+
+);
+
+
+
+

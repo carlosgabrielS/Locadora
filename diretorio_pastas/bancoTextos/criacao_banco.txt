@@ -1,0 +1,16 @@
+create database db_locadora;
+
+use db_locadora;
+
+CREATE TABLE tbl_fale_conosco(
+	codigo INT NOT NULL PRIMARY KEY auto_increment,
+	nome VARCHAR(100) NOT NULL,
+	telefone VARCHAR(100) NULL,
+	celular VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	home_page VARCHAR(100) NULL,
+	facebook VARCHAR(100) NULL,
+	sugestao TEXT NULL,
+	produto VARCHAR(100) NULL,
+	sexo CHAR(1) NOT NULL,
+	profissao VARCHAR(100) NOT NULL);

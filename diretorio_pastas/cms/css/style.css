@@ -1,0 +1,573 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: verdana;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#tamanho_centralizar{
+ width:  1000px;   
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*******************/
+#container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    display: none;
+		
+}
+
+#modal{
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px; 
+}
+
+#fechar{
+    height:25px; 
+    width:40px; 
+    background-color:red; 
+    text-align:center; 
+    text-decoration:none; 
+    color:#000; 
+    position: absolute;
+    margin-left: 660px;
+}
+
+#visualizar_fale_conosco_cms table{
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+}
+#visualizar_fale_conosco_cms tr{
+    width: 100%;
+    height: 55px;
+    margin: 105px;
+}
+
+#visualizar_fale_conosco_cms th{
+    width: 140px;
+    height: inherit;
+    text-align: left;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: solid 1px black;
+}
+
+#visualizar_fale_conosco_cms td{
+    width: 500px;
+    height: inherit;
+    border: solid 1px black;
+    padding-left: 20px;
+}
+
+#conteudo_sugestao{
+    padding: 20px;
+    width: 500px;
+    height: 250px;
+}
+
+
+#a{
+    display: none;
+}
+
+#b{
+    display: none;
+}
+
+#d{
+    display: none;
+}
+
+
+
+#cms{
+    width: 1000px;
+    height: 800px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid #222;
+    margin-top: 80px;
+    background-color: #fff;
+    float: left;
+    z-index: 1;
+    
+}
+
+/*********/
+#head_cms{
+    
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    color: #fff;
+    width: 100%;
+    height: 20%; 
+    background-color: #888;
+    border-bottom: solid 1px #222;
+    
+}
+
+#conteudo_header_cms{
+    
+    width: 65%;
+    height: 100%;
+    float: left;
+    padding-left: 40px;
+    padding-top: 80px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#conteudo_header_cms span{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#logo_cms{
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+#logo_cms img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*************/
+#administradores{
+    color: #444;
+    width: 100%;
+    height: 20%;
+    border-bottom: solid 1px #222;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+#usuarios{
+    width: 75%;
+    height: 100%;
+    
+    float: left;
+}
+
+.usuarios_sistema{
+    width: 23%;
+    height: 100%;
+    float: left;
+    
+    margin-left: 1.5%;
+}
+
+.usuarios_sistema_imagem{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;  
+    transition: 0.5s;
+}
+
+.usuarios_sistema_imagem:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.usuarios_sistema_imagem img{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;    
+}
+
+.usuarios_sistema_nome{
+    width: 100%;
+    height: 15%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#logaut{
+    width: 25%;
+    height: 100%;
+    
+    float: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#logaut span{
+    font-weight: bold;
+}
+
+#nome_logaut{
+    width: 100%;
+    height: 80%;
+    
+}
+
+#navegacao_logaut{
+    width: 100%;
+    height: 20%;
+    
+    text-align: right;
+}
+
+/*******************/
+
+#suporta_conteudo{
+    width: 100%;
+    height: 430px;
+    border-bottom: solid 1px black;
+    overflow-y: scroll;
+}
+
+#local_paginas{
+    color: #444;
+    width: 100%;
+    height: 430px;   
+}
+
+.paginas_navegacao{
+    width: 28%;
+    height: 23%;
+    float: left;
+    margin: 20px;
+}
+
+.imagens_pag_nav{
+    width: 45%;
+    height: 100%;
+    background-color: cadetblue;
+    float: left;
+    
+}
+
+.pag_nav{
+    width: 55%;
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    float: left;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+/****************/
+
+/*******************/
+#adm_fale_conosco{
+    width: 100%;
+    min-height:430px;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #888;
+	border: 2px solid #555555;
+}
+
+.scrollbar
+{
+	float: left;
+	height: 100%;
+	width: inherit;
+	overflow-y: scroll;
+	
+    border-bottom: 1px solid #777;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+
+#adm_fale_conosco td{ 
+    max-width: 115px;
+    height: 40px;
+    border-bottom: solid 1px darkgrey;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap; 
+}
+
+#adm_fale_conosco tr:hover{
+    background-color: #ededed;
+    transition: 0.3s;
+}
+
+
+.inform_fale_conosco{
+    width: 225px;
+    height: 30px;
+    font-size: 16px;
+    background-color:darkgrey;
+    color: #333;
+}
+
+.inform_icon{
+    width: 100px;
+    height: 40px;
+    background-color:darkgrey;
+    color: #333;
+}
+
+#adm_fale_conosco td img{
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+}
+/*******************/
+
+/* GERENCIAMENTO DE PÁGINAS*/
+#tabela_sobre table{
+    width: 100px;
+    height: 700px;
+        
+}
+
+
+.tabela_sobre tr{
+    width:  100%;
+    height: 40px;      
+}
+
+.tabela_sobre th{
+    padding: 15px;
+    height: 30px;
+    width: 10%;
+    white-space: nowrap; 
+    word-wrap:break-word;
+        
+}
+
+.tabela_sobre td{
+    padding: 15px;
+    height: 40px;
+    width: 10%;
+    white-space: nowrap; 
+    word-wrap:break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;       
+}
+
+.tabela_sobre p{
+    width: 450px;
+    height: 20px;
+}
+
+#icon_table img{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/* FIM DO GERENCIAMENTO DE PÁGINAS*/
+
+/* INICIO ADMINISTRADOR DE USUARIOS*/
+
+
+
+
+
+#administ_usuarios img{
+    width: 40px;
+		height: 40px;
+		margin-left: 15px;
+}  
+#tabela_resultados img{
+    width: 40px;
+    height: 40px;
+} 
+
+
+
+
+.align_direita{
+		width: 150px;
+		height: 60px;
+		margin-left: auto;
+		margin-top: 10px;
+}
+
+#administ_usuarios th{
+		width: 25%;
+		height: 30px;
+		background-color: darkgrey;
+}
+
+#administ_usuarios tr:hover{
+    background-color: #ededed;
+    transition: 0.3s;
+}
+
+#administ_usuarios table{
+		margin-top: -50px;
+		margin-left: 10px;
+		width: 850px;
+		height: auto;
+}
+
+#administ_usuarios td{
+		text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+		border-bottom: solid 1px darkgrey;
+}
+
+/*Cadastro de users*/
+#cadastros{
+    width: 100%;
+    height: 80px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-bottom: solid 1px darkgrey;
+}
+
+#cadastros img{
+    width: 90px;
+    height: 90px;
+}
+
+#cadastros tr{
+    width: 100%;
+    height: 50px; 
+}
+
+#cadastros table{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+
+#cadastros span, input, select{
+    font-size: 18px; 
+    height: 30px
+}
+
+/*CADASTRO NIVEL*/
+
+#visu img{
+    width: 40px;
+		height: 40px;
+		margin-left: 15px;
+}  
+
+.align_direita{
+		width: 150px;
+		height: 60px;
+		margin-left: auto;
+		margin-top: 10px;
+}
+
+#visu th{
+		width: 25%;
+		height: 30px;
+		background-color: darkgrey;
+}
+
+#visu tr:hover{
+    background-color: #ededed;
+    transition: 0.3s;
+}
+
+#visu table{
+		margin-top: 250px;
+		margin-left: 70px;;
+		width: 850px;
+		height: auto;
+}
+
+#visu td{
+		text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+		border-bottom: solid 1px darkgrey;
+}
+
+/*FINAL DO ADMINISTRADORES DE USUARIOS*/
+
+
+
+/*Cruds*/
+# td{ 
+    max-width: 115px;
+    height: 40px;
+    border: solid 1px #777;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap; 
+}
+
+
+/************** RODAPÉ ***************/
+#rodape{
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    height: 7%;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #444;
+    overflow-y: auto;
+}
+
+#scroll_tabela{
+    width: 980px;
+    height: 400px;
+    background-color: #f0f0f0;
+    overflow: scroll;
+}
+
+.caixa_fotos{
+    float: left;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
